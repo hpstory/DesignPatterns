@@ -1,6 +1,6 @@
 ﻿namespace SingletonPattern.SingleThread
 {
-    internal class Singleton
+    internal sealed class Singleton
     {
         private static Singleton instance;
 
@@ -21,16 +21,6 @@
 
                 return instance;
             }
-        }
-    }
-
-    public class Test
-    {
-        static void Main(string[] args)
-        {
-            Singleton s1 = Singleton.Instance;
-            Singleton s2 = Singleton.Instance;
-            Console.WriteLine(s1.Equals(s2));
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace SingletonPattern.LazyType
 {
-    internal class Singleton
+    internal sealed class Singleton
     {
         private static readonly Lazy<Singleton> instance = new Lazy<Singleton>(() => new Singleton());
 

@@ -1,6 +1,6 @@
 ﻿namespace SingletonPattern.Multithreading
 {
-    internal class Singleton
+    internal sealed class Singleton
     {
         // volatile 关键字指示一个字段可以由多个同时执行的线程修改。
         private static volatile Singleton instance;
@@ -12,6 +12,23 @@
         {
             Console.WriteLine("Created");
         }
+
+        //public static Singleton Instance
+        //{
+        //    get
+        //    {
+        //        // 同一时刻只有一个线程可以进入
+        //        lock (instanceLock)
+        //        {
+        //            if (instance == null)
+        //            {
+        //                instance = new Singleton();
+        //            }
+        //        }
+
+        //        return instance;
+        //    }
+        //}
 
         public static Singleton Instance
         {
