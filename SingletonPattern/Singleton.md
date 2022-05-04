@@ -8,7 +8,7 @@
 
 ## 最简单的单例模式
 ```
-SingletonPattern/SingleThread/Singleton.cs
+// SingletonPattern/SingleThread/Singleton.cs
 
 internal sealed class Singleton
 {
@@ -38,7 +38,7 @@ internal sealed class Singleton
 
 ## 多线程时的单例
 ```
-SingletonPattern/Multithreading/Singleton.cs
+// SingletonPattern/Multithreading/Singleton.cs
 
 internal sealed class Singleton
 {
@@ -78,7 +78,7 @@ internal sealed class Singleton
 #### 改进
 双重锁定, 先判断实例是否存在, 如果不存在的时候再加锁处理
 ```
-SingletonPattern/Multithreading/Singleton.cs
+// SingletonPattern/Multithreading/Singleton.cs
 
 internal sealed class Singleton
 {
@@ -116,7 +116,7 @@ internal sealed class Singleton
 ## 静态构造函数
 利用C#的语法, 使用静态构造函数, 在第一次引用类的任何成员时创建实例, .NET运行时保证只调用一次静态构造函数.
 ```
-SingletonPattern/StaticConstructor/Singleton.cs
+// SingletonPattern/StaticConstructor/Singleton.cs
 
 internal sealed class Singleton
 {
@@ -135,7 +135,7 @@ internal sealed class Singleton
 #### 改进
 使用嵌套类, 创建实例的时候, 调用嵌套类的静态构造函数创建实例, 如果不调用属性, 就不会调用嵌套类, 也不会创建实例.
 ```
-SingletonPattern/StaticConstructor/Singleton.cs
+// SingletonPattern/StaticConstructor/Singleton.cs
 
 internal sealed class Singleton
 {
@@ -167,7 +167,7 @@ internal sealed class Singleton
 通过Lazy关键字, 声明的对象仅当第一次使用的时候, 再初始化, 如果一直没有调用, 就不初始化.
 
 ```
-SingletonPattern/LazyType/Singleton.cs
+// SingletonPattern/LazyType/Singleton.cs
 
 internal sealed class Singleton
 {
