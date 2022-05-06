@@ -1,4 +1,5 @@
 # DesignPatterns
 
 * [Singleton](./SingletonPattern/Singleton.md)
-* [AbstractFactory](./AbstractFactoryPattern/AbstractFactory.md)
+* [Abstract Factory](./AbstractFactoryPattern/AbstractFactory.md)
+* [Builder](./BuilderPattern/Builder.md)
